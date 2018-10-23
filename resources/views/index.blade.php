@@ -14,6 +14,9 @@ Books Unlimited
                 At Books Unlimited, we strive to bring the best and obscure books to
                 surprise and delight every reader!
             </p>
+            <p class="text-center">
+                Here's a random book from our library: <a href="{{ route('books.book', ['id' => $book->id]) }}">{{ $book->title }}</a>
+            </p>
             <div class="text-center">
                 <a href="{{ route('books.index') }}" class="btn btn-primary">Go to books</a>
             </div>

@@ -12,9 +12,14 @@
 */
 
 /* Homepage route */
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Route::get('/',[
+    'uses' => 'BookController@getIndex',
+    'as' => 'home'
+]);
+
+// Route::get('/', function () {
+//     return view('index');
+// })->name('home');
 
 /* About page route */
 Route::get('about', function(){
@@ -23,7 +28,7 @@ Route::get('about', function(){
 
 /* Books list page route */
 Route::get('books', [
-    'uses' => 'BookController@getIndex',
+    'uses' => 'BookController@getBooksIndex',
     'as' => 'books.index'
 ]);
 

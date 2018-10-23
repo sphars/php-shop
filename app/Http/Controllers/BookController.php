@@ -10,6 +10,13 @@ class BookController extends Controller
 {
     //action
     public function getIndex(){
+        $totalBooks = Book::all()->count(); //get amount of books
+        $randBookId = rand(1, $totalBooks); //pick random id
+        $book = Book::find($randBookId);
+        return view('index', ['book' => $book]);
+    }
+
+    public function getBooksIndex(){
         $books = Book::orderBy('title', 'asc')->paginate(3);
         return view('books.index', ['books' => $books]);
     }
