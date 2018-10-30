@@ -39,7 +39,7 @@ Route::get('book/{id}', [
 ]);
 
 /* Admin pages group */
-Route::group(['prefix' => 'admin'], function(){
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     /* Admin homepage route */
     Route::get('', [
         'uses' => 'BookController@getAdminIndex',

@@ -29,25 +29,16 @@ class BookController extends Controller
     }
 
     public function getAdminIndex(){
-        if(!Auth::check()){
-            return redirect()->back();
-        }
         $books = Book::orderBy('title', 'asc')->get();
         return view('admin.index', ['books' => $books]);
     }
 
     public function getAdminCreate(){
-        if(!Auth::check()){
-            return redirect()->back();
-        }
         $genres = Genre::all();
         return view('admin.create', ['genres' => $genres]);
     }
 
     public function getAdminEdit($id){
-        if(!Auth::check()){
-            return redirect()->back();
-        }
         //$book = Book::find($id);
         $book = Book::where('id', '=', $id)->first();
         $genres = Genre::all();
@@ -55,9 +46,6 @@ class BookController extends Controller
     }
 
     public function postAdminCreate(Request $request){
-        if(!Auth::check()){
-            return redirect()->back();
-        }
         $this->validate($request, [
             'title' => 'required|min:1',
             'author' => 'required|min:5',
@@ -77,9 +65,6 @@ class BookController extends Controller
     }
 
     public function postAdminUpdate(Request $request){
-        if(!Auth::check()){
-            return redirect()->back();
-        }
         $this->validate($request, [
             'title' => 'required|min:1',
             'author' => 'required|min:5',
@@ -99,9 +84,6 @@ class BookController extends Controller
     }
 
     public function getAdminDelete($id){
-        if(!Auth::check()){
-            return redirect()->back();
-        }
         $book = Book::find($id);
 
         //delete other associated tables values here
