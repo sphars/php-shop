@@ -15,6 +15,7 @@
         <div class="navbar-nav">
             @if (!Auth::check())
             <a href="{{ url('/login') }}" class="nav-item nav-link">Login</a>
+            <a href="{{ url('/register') }}" class="nav-item nav-link">Register</a>
             @else
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Admin</a>

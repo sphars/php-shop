@@ -1,5 +1,7 @@
 @extends('layouts.master')
-
+@section('pageTitle')
+Books Unlimited Administration
+@endsection
 @section('content')
     <div class="row">
         <div class="col-md-12">

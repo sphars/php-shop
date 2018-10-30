@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('pageTitle')
+Register
+@endsection
 
 @section('content')
 <div class="container">
