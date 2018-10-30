@@ -17,8 +17,17 @@ You can then run the server by using
 ```
 php artisan serve
 ```
+In order for the password reset instructions to send, you'll need to supply your own Mailtrap.io credentials in the `.env` file:
+```
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=YOURMAILTRAPUSERNAME
+MAIL_PASSWORD=YOURMAILTRAPPASSWORD
+MAIL_ENCRYPTION=null
+```
 
 ### To-do
 * Editing a book doesn't bring up a books set genres (boxes are unchecked on the form.)
-* Dynamically add genres on the create/edit book form.
+* Dynamically add more genres on the create/edit book form.
 * Navigate by genre (click on a genre, see all books in that genre).
