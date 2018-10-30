@@ -23,7 +23,10 @@ Books at Books Unlimited
                         @endforeach
                     </p>
                     <div class="text-center my-2">
-                        <a href="{{ route('books.book', ['id' => $book->id]) }}" class="btn btn-outline-info">View </a>
+                        <a href="{{ route('books.book', ['id' => $book->id]) }}" class="btn btn-outline-info">View</a>
+                        @if (Auth::check())
+                        <a href="{{route('admin.edit', ['id' => $book->id]) }}" class="btn btn-outline-danger">Edit</a>
+                        @endif
                     </div>
                 </div>
             </div>
