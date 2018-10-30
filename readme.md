@@ -28,6 +28,6 @@ MAIL_ENCRYPTION=null
 ```
 
 ### To-do
-* Editing a book doesn't bring up a books set genres (boxes are unchecked on the form.)
+* ~~Editing a book doesn't bring up a books set genres (boxes are unchecked on the form.)~~
 * Dynamically add more genres on the create/edit book form.
 * Navigate by genre (click on a genre, see all books in that genre).

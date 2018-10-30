@@ -27,7 +27,8 @@ Edit Book
             <div class="form-group">
                 @foreach ($genres as $genre)
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" value="{{ $genre->id }}" name="genres[]">
+                        <input type="checkbox" class="form-check-input" value="{{ $genre->id }}" name="genres[]"
+                        @if ($book->genres->contains($genre->id)) checked=checked @endif >
                         <label for="" class="form-check-label">{{ $genre->name }}</label>
                     </div>
                 @endforeach
