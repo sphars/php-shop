@@ -11,9 +11,22 @@
             <li class="nav-item">
                 <a href="{{ route('about') }}" class="nav-link">About</a>
             </li>
-            <li class="nav-item">
-                <a href="{{ route('admin.index') }}" class="nav-link">Admin</a>
-            </li>
         </ul>
+        <div class="navbar-nav">
+            @if (!Auth::check())
+            <a href="{{ url('/login') }}" class="nav-item nav-link">Login</a>
+            @else
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Admin</a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="{{ route('admin.index') }}" class="dropdown-item">Posts</a>
+                    <a href="{{ url('/logout') }}" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link">Logout</a>
+                    <form action="{{ url('/logout') }}" id="logout-form" method="POST">
+                        {{ csrf_field() }}
+                    </form>
+                </div>
+            </div>
+            @endif
+        </div>
     </div>
 </nav>
