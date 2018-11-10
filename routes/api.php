@@ -19,7 +19,7 @@ use Illuminate\Http\Request;
 
 Route::get('books', 'BooksApiController@index'); //get all books
 Route::get('books/{id}', 'BooksApiController@show'); //get a specific book
-Route::post('books', 'BooksApiController@store'); //store a book
+Route::post('books', 'BooksApiController@store'); //store a new book
 Route::put('books/{book}', 'BooksApiController@update'); //update a book
 Route::delete('books/{book}', 'BooksApiController@delete'); //delete a book
 Route::post('books/{id}', 'BooksApiController@storebook'); //handle putting a book

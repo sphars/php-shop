@@ -38,7 +38,8 @@ class GenresApiController extends Controller
     //update a specific genre
     public function update(Request $request, Genre $genre)
     {
-        return response()->json($genre->update($request->all()), 200);
+        $genre->update($request->all());
+        return response()->json($genre, 200);
     }
 
     //delete a specific genre
