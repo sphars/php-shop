@@ -28,7 +28,7 @@ MAIL_ENCRYPTION=null
 ```
 
 ## API
-There is a basic API for getting books and genres. See the table below for API calls. Status codes are indicated.  
+There is a basic API for getting books and genres. See the table below for API calls. Status codes are indicated. [Postman docs](books.postman_collection.json)  
 Usage: `{hostname}/api/{resource}`
 
 | Resource               | GET (Read) (200)                     | POST (Create) (201)   | PUT (Update) (200)       | DELETE (Delete) (204)    |
