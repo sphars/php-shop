@@ -25,3 +25,4 @@ Route::delete('books/{book}', 'BooksApiController@delete'); //delete a book
 Route::post('books/{id}', 'BooksApiController@storebook'); //handle putting a book
 Route::any('errors', 'BooksApiController@errors'); //handle any errors
 
+Route::apiResource('genres', 'GenresApiController'); //route for genre api calls
