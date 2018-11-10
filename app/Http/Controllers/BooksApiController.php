@@ -15,11 +15,13 @@ class BooksApiController extends Controller
 
     //Gets a specific book
     public function show($id){
-        $book = Book::find($id);
+        $book = Book::with('genres')->findOrFail($id);
         if(is_null($book)){
             return response()->json(null, 404);
         }
-        return response()->json(Book::findOrFail($id), 200);
+        $response['book'] = $book;
+        $response['genres'] = $book->genres;
+        return response()->json($response, 200);
     }
 
     //Stores a new book
@@ -60,5 +62,8 @@ class BooksApiController extends Controller
         return response()->json(['msg' => 'An error occurred'], 501);
     }
 
-
+    public function genres(Request $request, Book $book){
+        $genres = $book->genres;
+        return response()->json($genres, 200);
+    }
 }

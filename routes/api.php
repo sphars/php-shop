@@ -26,3 +26,4 @@ Route::post('books/{id}', 'BooksApiController@storebook'); //handle putting a bo
 Route::any('errors', 'BooksApiController@errors'); //handle any errors
 
 Route::apiResource('genres', 'GenresApiController'); //route for genre api calls
+Route::get('books/{book}/genres', 'BooksApiController@genres'); //get a book's genres

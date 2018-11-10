@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model{
 
     protected $fillable = ['title', 'author', 'description', 'price'];
+    protected $hidden = ['genres'];
 
     public function genres(){
         return $this->belongsToMany('App\Genre', 'book_genre', 'book_id', 'genre_id')->withTimestamps();
