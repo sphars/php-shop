@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "4949eb73-3af6-42fe-8c43-d5c32e3e5195",
+		"name": "books",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET BOOKS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/books",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BOOK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/books/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BOOK GENRES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/books/2/genres",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						"2",
+						"genres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET GENRES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/genres",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"genres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET GENRE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/genres/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"genres",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST BOOK",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"A New Hope\",\n\t\"author\": \"George Lucas\",\n\t\"description\": \"A farm boy saves the princess. Action and adventure ensue.\",\n\t\"price\": \"7.99\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/books",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST GENRE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"History\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/genres",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"genres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST BOOK ID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"A New Hope\",\n\t\"author\": \"George Lucas\",\n\t\"description\": \"A farm boy saves the princess. Action and adventure ensue.\",\n\t\"price\": \"7.99\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/books/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT BOOK",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"A New Hope\",\n\t\"author\": \"George Lucas\",\n\t\"description\": \"A farm boy saves the princess. A criminal gets involved. Sword fights. Action and adventure ensue.\",\n\t\"price\": \"7.99\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/books/8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT GENRE",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Biology\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/genres/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"genres",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE BOOK",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"A New Hope\",\n\t\"author\": \"George Lucas\",\n\t\"description\": \"A farm boy saves the princess. A criminal gets involved. Sword fights. Action and adventure ensue.\",\n\t\"price\": \"7.99\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/books/8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE GENRE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"A New Hope\",\n\t\"author\": \"George Lucas\",\n\t\"description\": \"A farm boy saves the princess. A criminal gets involved. Sword fights. Action and adventure ensue.\",\n\t\"price\": \"7.99\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/genres/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"genres",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ERRORS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/errors/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"errors",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

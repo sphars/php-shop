@@ -27,6 +27,19 @@ MAIL_PASSWORD=YOURMAILTRAPPASSWORD
 MAIL_ENCRYPTION=null
 ```
 
+## API
+There is a basic API for getting books and genres. See the table below for API calls. Status codes are indicated.  
+Usage: `{hostname}/api/{resource}`
+
+| Resource               | GET (Read) (200)                     | POST (Create) (201)   | PUT (Update) (200)       | DELETE (Delete) (204)    |
+|------------------------|--------------------------------------|-----------------------|--------------------------|--------------------------|
+| `/books`               | Returns list of books                | Creates a new book    |                          |                          |
+| `/books/{id}`          | Returns a specific book with genres  | Not allowed (405)     | Updates a specific book  | Deletes a specific book  |
+| `/books/{book}/genres` | Return the genres of a specific book |                       |                          |                          |
+| `/genres`              | Returns a list of genres             | Creates a new genre   |                          |                          |
+| `/genres/{id}`         | Returns a specific genre             |                       | Updates a specific genre | Deletes a specific genre |
+
+
 ### To-do
 * ~~Editing a book doesn't bring up a books set genres (boxes are unchecked on the form.)~~
 * Dynamically add more genres on the create/edit book form.
