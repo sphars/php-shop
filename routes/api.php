@@ -13,6 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::get('books', 'BooksApiController@index'); //get all books
+Route::get('books/{id}', 'BooksApiController@show'); //get a specific book
+Route::post('books', 'BooksApiController@store'); //store a book
+Route::put('books/{book}', 'BooksApiController@update'); //update a book
+Route::delete('books/{book}', 'BooksApiController@delete'); //delete a book
+Route::any('errors', 'BooksApiController@errors'); //handle any errors
