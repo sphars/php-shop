@@ -51,6 +51,10 @@ class BooksApiController extends Controller
         return response()->json(null, 204);
     }
 
+    public function storebook(){
+        return response()->json(null, 405);
+    }
+
     //handle errors
     public function errors(){
         return response()->json(['msg' => 'An error occurred'], 501);
